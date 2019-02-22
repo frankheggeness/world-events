@@ -12,6 +12,9 @@ function italics(){
 
 var webContents = 'The Internet got its start in the United States more than 50 years ago as a government weapon in the Cold War. In the 1980s, research at CERN in Switzerland by British computer scientist Tim Berners-Lee resulted in the World Wide Web, linking hypertext documents into an information system, accessible from any node on the network.';
 
+function changeContent(){
+    webby.innerHTML = webContents;
+}
 
 
 // 3. The Boxer Rebellion
@@ -19,23 +22,39 @@ var webContents = 'The Internet got its start in the United States more than 50 
 
 var revolution = 'Boxer Uprising or Yihetuan Movement was an anti-imperialist uprising which took place in China towards the end of the Qing dynasty between 1899 and 1901. It was initiated by the Militia United in Righteousness, known in English as the "Boxers," and was motivated by proto-nationalist sentiments and opposition to foreign imperialism and associated Christian missionary activity.';
 
+function translation(){
+    fightDaPower.innerHTML = revolution;
+}
 
 
 // 4. The Great Depression
 // Add an event listener to the h3 element id of 'hardTimes' and create a function to display the contents in the div element of 'depress'.
 
+hardTimes.addEventListener('click', showContents);
+function showContents(){
+    depress.style.display = 'block';
+}
 
 
 // 5. Apollo 11
 // Add an event listener to the h3 element id of 'blastOff' and create a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
 
+blastOff.addEventListener('click', hideContents);
+
+function hideContents(){
+    if (moonWalk.style.display === 'none'){
+        moonWalk.style.display = 'block';
+    }else{
+        moonWalk.style.display = 'none';
+    }
+}
 
 
 // 6. The American Civil War
 // Add an event listener to the div element id of 'freedom' and create a function to remove all instances of 'corn' in the content.
 
 
-// 7. The Renaissance
+// 7. The Renaissance 
 // Add an event listener to the div element id of 'rebirth' and create a function to remove all the lowercase and uppercase z's in the content. 
 
 
