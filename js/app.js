@@ -53,10 +53,33 @@ function hideContents(){
 // 6. The American Civil War
 // Add an event listener to the div element id of 'freedom' and create a function to remove all instances of 'corn' in the content.
 
+freedom.addEventListener('click', removeCorn);
+
+function removeCorn(){
+    freedom.innerHTML = freedom.innerHTML.replace('corn','');
+
+}
 
 // 7. The Renaissance 
 // Add an event listener to the div element id of 'rebirth' and create a function to remove all the lowercase and uppercase z's in the content. 
 
+rebirth.addEventListener('click', noZ);
+
+function noZ(){
+    var zLetters = [];
+    var noZLetters = [];
+    var text = rebirth.innerHTML;
+    var textSplit = text.split('');
+    for (i=0; i< text.length; i++){
+        if(textSplit[i] ==='z' || textSplit[i] === 'Z'){
+            zLetters.push(textSplit[i])
+        } else{
+            noZLetters.push(textSplit[i])
+        }
+    }
+    var remake = noZLetters.join('');
+    rebirth.innerHTML = remake;
+}
 
 
 // 8. the Gutenberg Printing Press
