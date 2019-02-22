@@ -103,12 +103,30 @@ function randBook(){
 // use the following image reference:
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
 
+var warPic = document.getElementsByTagName('img');
+warPic[9].addEventListener('mouseover', newImage);
 
+function newImage(){
+    if(warPic[9].src === 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg'){
+        warPic[9].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73'
+    } else{
+        warPic[9].src = 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg'
+    }
+}
 
 // 10. The Industrial Revolution
 // Add an event listener to the h3 element and create a function that will reverse the contents in the div element id of 'gameChanger'
 
+var title = document.getElementsByClassName('title');
+title[9].addEventListener('click',reverse);
 
+function reverse(){
+    var stuff = gameChanger.innerHTML;
+    var stuffSplit = stuff.split('');
+    var stuffReverse = stuffSplit.reverse();
+    var stuffJoin = stuffReverse.join('');
+    gameChanger.innerHTML = stuffJoin;
+}
 
 // Final Boss
 // Add event listeners for the thumbs up and thumbs down images that will count the number of times the thumb has been clicked on. 
